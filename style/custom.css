@@ -1,0 +1,285 @@
+/* Custom CSS
+-------------------------*/
+div.logo {
+    background: url([[setting:logo]]) no-repeat 0 0;
+    display: block;
+    float: left;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.dir-rtl div.logo {
+    background: url([[setting:logo]]) no-repeat 100% 0;
+    display: block;
+    float: right;
+}
+html,body {min-height:100%;}
+html {
+	background-image: url([[setting:pagebg]]);
+	background-repeat: no-repeat;
+	background-color: rgba(45,41,42,1);
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+* {font-family:'Open Sans',Helvetica,Arial,sans-serif;}
+pre,code { font-family: monospace; }
+
+body {
+    background-color: transparent;
+    padding-top: 20px;
+}
+
+body, a {
+        color: rgba(255,255,255,.99);
+        text-decoration: none;
+}
+
+a:hover {
+    color: rgb(183, 223, 255);
+        text-decoration: none;
+}
+
+body > .body-wrapper {
+	max-width: 1140px;
+	min-width: 740px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+
+body > .body-wrapper > .skin-wrapper {
+    background-color: rgba(0,0,0,.2);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.2);
+    min-height:100%;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+h1{ font-size: 27px; }
+h2{ font-size: 22px; }
+h3{ font-size: 19px; }
+h4{ font-size: 16px; }
+h5{ font-size: 15px; }
+h6{ font-size: 14px; }
+
+.dimmed-category a {
+    color: rgba(255,255,255,.7);
+}
+.block, .block a, a.disabled, .gtopics {
+	color: rgba(19,47,106,1);
+	outline: none;
+}
+.block a:hover {
+	color: rgba(75,142,203,1);
+}
+.block h2:first-of-type {
+	color: rgba(19,47,106,1);
+}
+
+/* .course_category_tree .category>.info , , #region-main */
+.block, nav.navbar-inner,
+table#form td.submit, .form-buttons, .path-admin .buttons, #fitem_id_submitbutton, .fp-content-center form+div, div.backup-section+form, #fgroup_id_buttonar {
+	background-color: rgba(255,255,255,.6);
+	border: 1px solid rgba(255,255,255,.8);
+	box-shadow: inset 0 10px 10px -5px rgba(0,0,0,.1);
+}
+.block .header h2 {
+	text-shadow: none;
+}
+#region-main, .course_category_tree .category>.info, .coursebox, .courses .coursebox.even, .courses .coursebox.odd {
+    background: rgba(0,0,0,.1);
+    box-shadow: inset 0 0 50px rgba(0,0,0,.1);
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.25);
+}
+#region-main {
+    background: rgba(0,0,0,.3);
+    border-radius: 10px;
+}
+
+.coursebox>.info>.coursename, .coursebox .content .teachers, .coursebox .content .courseimage, .coursebox .content .coursefile {
+    float: none;
+    clear: both;
+    width: 100%;
+}
+.coursebox .content .summary, .coursebox .content .coursecat {
+    float: none;
+    width: 100%;
+}
+
+ul.breadcrumb, ul.course-category-selector {
+	padding: 0;
+	margin: 0;
+	background: none;
+	border: none;
+	border-radius: none;
+}
+ul.course-category-selector{ display: table; list-style-position: inside; list-style-type: none; width: 100%; border-collapse: separate; border-spacing: 2px 0; }
+ul.course-category-selector>li { display: table-cell; padding: .7em .3em; border: 1px solid rgba(255,255,255,.25); border-radius: .3em; vertical-align: middle; width: 10%; }
+ul.course-category-selector>li.selected { background-color: rgba(255,255,255,.1); border-color: rgba(255,255,255,.5); }
+ul.breadcrumb>li {
+	line-height: 50px;
+}
+ul.breadcrumb>li a, ul.course-category-selector>li a {
+	color: #fff;
+	text-shadow: 1px 1px 0 rgba(0,0,0,.4);
+}
+table#form td.submit, .form-buttons, .path-admin .buttons, #fitem_id_submitbutton, .fp-content-center form+div, div.backup-section+form, #fgroup_id_buttonar {
+	border-width: 1px 0 0 0; margin-bottom: 0;
+}
+
+/* Content Styles
+----------------------- */
+#region-main h2:first-of-type {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#region-main {border-radius: 4px;padding-bottom: 15px;}
+
+/* Scorm Content Styles
+----------------------- */
+
+#page-mod-scorm-player #scormpage #scorm_object {
+	width: 100%;
+	height: 100%;
+}
+#page-mod-scorm-player #region-main {
+	padding-bottom: 0;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+}
+#page-mod-scorm-player #region-main > div > h2 {
+	color: #fff;
+}
+
+/* Page Header & NavBar Hacks
+-------------------------*/
+
+#page-header .span6.text-right {
+	line-height: 75px; /* the same height as the logo for effective vertical centering, assuming the line never wraps */
+	white-space: nowrap;
+}
+
+#page-header div.singlebutton,
+#page-header div.singlebutton > form,
+#page-header div.singlebutton > form > div {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+#page-header div.singlebutton > form input[type='submit'] { /* make form buttons look like bootstrap design */
+/*
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    border: 1px solid #ccc;
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    */
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: .3em .7em;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 25px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    transition: background-color .1s ease;
+}
+#page-header div.singlebutton > form input[type='submit']:hover {
+    background-color: #555;
+}
+#page-header a:last-of-type {
+	margin-left: .3em;
+}
+#page-header a:first-of-type:not(:last-of-type) {
+	margin-right: .3em;
+}
+
+
+/* Custom Button Colours
+-------------------------*/
+
+.btn.logout-link:hover, .btnlogout-link:focus,
+.btn.btn-saveexit:hover, .btn.btn-saveexit:focus {
+	color: #fff;
+	background-position: 0 -9px;
+}
+
+.btn.btn-saveexit:hover, .btn.btn-saveexit:focus, .btn.btn-saveexit:active {
+    background-color: #A1E411;
+}
+
+.btn.logout-link:hover, .btn.logout-link:focus, .btn.logout-link:active {
+    background-color: rgb(0,157,218);
+}
+
+.btn.course-home:hover, .btn.course-home:focus, .btn.course-home:active {
+    background-color: rgba(19,47,106,1);
+}
+
+.btn.btn-saveexit, .btn.logout-link, .btn.course-home {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 25px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    vertical-align: middle;
+    transition: background-color .1s ease;
+}
+
+table#explaincaps tbody>tr:nth-child(odd)>td, table#defineroletable tbody>tr:nth-child(odd)>td, table.grading-report tbody>tr:nth-child(odd)>td, table#listdirectories tbody>tr:nth-child(odd)>td, table.rolecaps tbody>tr:nth-child(odd)>td, table.userenrolment tbody>tr:nth-child(odd)>td, table#form tbody>tr:nth-child(odd)>td, form#movecourses table tbody>tr:nth-child(odd)>td, #page-admin-course-index .editcourse tbody>tr:nth-child(odd)>td, .forumheaderlist tbody>tr:nth-child(odd)>td, table.flexible tbody>tr:nth-child(odd)>td, .generaltable tbody>tr:nth-child(odd)>td, table#explaincaps tbody>tr:nth-child(odd)>th, table#defineroletable tbody>tr:nth-child(odd)>th, table.grading-report tbody>tr:nth-child(odd)>th, table#listdirectories tbody>tr:nth-child(odd)>th, table.rolecaps tbody>tr:nth-child(odd)>th, table.userenrolment tbody>tr:nth-child(odd)>th, table#form tbody>tr:nth-child(odd)>th, form#movecourses table tbody>tr:nth-child(odd)>th, #page-admin-course-index .editcourse tbody>tr:nth-child(odd)>th, .forumheaderlist tbody>tr:nth-child(odd)>th, table.flexible tbody>tr:nth-child(odd)>th, .generaltable tbody>tr:nth-child(odd)>th {
+    background-color: rgba(255,255,255,.3);
+}
+
+#plugins-check-page #plugins-check .status-missing td, #plugins-check-page #plugins-check .status-downgrade td {
+    background-color: rgba(242, 222, 222, 0.55);
+}
+
+body.is-site-admin #region-main {
+    background-color: rgba(255,255,255,.9);
+    color: #333;
+}
+body.is-site-admin #region-main a,
+body.is-site-admin #region-main legend a,
+body.is-site-admin #region-main legend {
+    color: inherit;
+}
+
+/* Custom CSS Settings
+-------------------------*/
+[[setting:customcss]]
